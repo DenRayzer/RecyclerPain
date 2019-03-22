@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecycleHW</string>
+    <string name="login_input_error">Неверный логин или пароль</string>
+</resources>
