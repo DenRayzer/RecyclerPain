@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.hey.recyclehw.mock.Adapter;
@@ -26,8 +27,8 @@ public class FilmActivity extends AppCompatActivity implements Adapter.OnItemCli
     @Override
     public void onItemClick(String id) {
 
-        Toast.makeText(this, "Работает,ало"+id, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(FilmActivity.this,ConcreteFilmActivity.class);
+        intent.putExtra(ConcreteFilmActivity.User_id,id);
 
         startActivity(intent);
     }

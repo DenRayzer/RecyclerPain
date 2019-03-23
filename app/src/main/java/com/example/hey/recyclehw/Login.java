@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,17 +30,26 @@ public class Login extends AppCompatActivity {
         Entry.setOnClickListener(onEnterClickListener);
 
     }
+
+ private boolean isLoginValid(){
+        return Login.getText().toString().equals("admin");
+    }
+    private boolean isPasswordValid(){
+        return Password.getText().toString().equals("password");
+    }
+
     private View.OnClickListener onEnterClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (true){
+
+
+            if (isLoginValid()&&isPasswordValid()){
                 Intent intent = new Intent(Login.this,FilmActivity.class);
                 startActivity(intent);
-                Toast.makeText(Login.this, "hhh", Toast.LENGTH_SHORT).show();
             }
-            else  Toast.makeText(Login.this, "хуй", Toast.LENGTH_SHORT).show();
-
+            else  Toast.makeText(Login.this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show();
 
         }
     };
+
 }

@@ -18,7 +18,12 @@ public class Film {
 
 
     }
-     public String getNumber()   { return Number;};
+
+    public String getAwards() {
+        return Awards;
+    }
+
+    public String getNumber()   { return Number;};
     public String getActors() {
         return Actors;
     }

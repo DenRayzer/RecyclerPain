@@ -8,7 +8,7 @@
     android:id="@+id/card_view"
     android:background="#81C784"
     android:layout_margin="5dp"
-    card_view:cardCornerRadius="12dp"
+    card_view:cardCornerRadius="5dp"
     card_view:cardElevation="3dp"
     card_view:contentPadding="4dp"
     android:foreground="?selectableItemBackground"
@@ -24,18 +24,20 @@
             android:id="@+id/Namee"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:elevation="10dp"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:text="Юморист" />
 
         <TextView
             android:id="@+id/Score"
             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:background="#8AFF24"
+            android:textAlignment="center"
+            android:background="#8FBCFF"
             android:padding="3dp"
+
             android:textSize="24sp"
             tools:text="9.0" />
 
@@ -46,7 +48,7 @@
             android:layout_below="@+id/Namee"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/movie2" />
 
 
@@ -56,14 +58,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Namee"
-            android:layout_marginLeft="3dp"
+
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/Poster"
+            android:textStyle="bold"
             tools:text="2000" />
 
         <TextView
             android:id="@+id/Descriptionn"
-            android:layout_marginLeft="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Year"
@@ -71,11 +73,15 @@
             android:layout_toRightOf="@+id/Poster"
             tools:text="Лаконичное описание радует глаз читателя" />
 
-<TextView
-    android:id="@+id/item_number"
-    tools:text="#5"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/item_number"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="#"
+            tools:text="#5" />
 
 
     </RelativeLayout>

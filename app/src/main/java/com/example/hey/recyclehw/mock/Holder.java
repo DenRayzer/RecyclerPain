@@ -33,7 +33,7 @@ public class Holder extends RecyclerView.ViewHolder {
         Description.setText(mock.getDescription());
         Poster.setImageResource(mock.getPoster());
         Score.setText(mock.getScore());
-        Number.setText(mock.getNumber());
+        Number.setText("#"+mock.getNumber());
         id=mock.getNumber();
 
     }
@@ -43,6 +43,8 @@ public class Holder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 myListener.onItemClick(id);
+
+
             }
         });
     }

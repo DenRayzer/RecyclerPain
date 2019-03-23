@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/Poster"
+            android:layout_width="wrap_content"
+            android:layout_height="260dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/movie2">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/PodA"
+            android:layout_width="93dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/Year"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/Poster"
+            android:text="Actors:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/Year" />
+
+        <TextView
+            android:id="@+id/Actors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PodA"
+            android:layout_marginStart="5dp"
+
+            android:layout_toEndOf="@+id/Poster"
+            android:text="Harry Potter, Elizabeth May, Bill Norg"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/PodA" />
+
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/Poster"
+            android:text="Cats-Killers"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:background="#8FBCFF"
+            android:padding="3dp"
+            android:text="9.8"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+
+            android:text="This description used for the my person to shy,it need to be about three-four lines, i'm very tired and don't know write this"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Awards" />
+
+
+        <TextView
+            android:id="@+id/PodY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/Poster"
+            android:text="Year:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+
+        <TextView
+            android:id="@+id/Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PodY"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/Poster"
+            android:text="2001"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/PodY" />
+
+        <TextView
+            android:id="@+id/PodAw"
+            android:layout_width="255dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/Actors"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/Poster"
+            android:text="Awards:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/Actors" />
+
+        <TextView
+            android:id="@+id/Awards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PodAw"
+            android:layout_marginStart="5dp"
+
+            android:layout_toRightOf="@+id/Poster"
+            android:text="Нппп ошуптк пкуошпу поуп ошп укпоупшук пшоупо кшупоко купо ggggg ggguuug g uggug gug ugu"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Poster"
+            app:layout_constraintTop_toBottomOf="@+id/PodAw" />
+
+
+        <TextView
+            android:id="@+id/Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="# 5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/PodW"
+            android:layout_width="214dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/Description"
+            android:layout_marginTop="10dp"
+            android:text="Wrbsite:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+
+        <TextView
+            android:id="@+id/Website"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PodW"
+            android:layout_marginTop="5dp"
+
+            android:autoLink="web"
+            android:text="https://music.yandex.ru/users/denrayzer/playlists"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PodW" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
