@@ -18,7 +18,7 @@ public class ConcreteFilmActivity extends AppCompatActivity {
     public static String User_id = "1";
     private ImageView Poster;
     private TextView Name, Description, Actors,Year,Score,Awards,Website,Number;
-    private String id;
+    private int id;
 
     Intent intent = getIntent();
 
@@ -27,9 +27,9 @@ public class ConcreteFilmActivity extends AppCompatActivity {
         setContentView(R.layout.concrete_film_layout2);
 
         Bundle bundle = getIntent().getExtras();
-        id = bundle.getString(User_id);
+        id = bundle.getInt(User_id);
 
-        final Film thisFilm = FilmGenerator.generate().get(Integer.parseInt(id) - 1);
+        final Film thisFilm = FilmGenerator.generate().get(id);
 
         Poster = findViewById(R.id.Poster);
         Name = findViewById(R.id.Name);

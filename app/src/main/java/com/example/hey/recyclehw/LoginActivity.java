@@ -2,16 +2,14 @@ package com.example.hey.recyclehw;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private EditText Login;
     private EditText Password;
     private Button Entry;
@@ -44,10 +42,10 @@ public class Login extends AppCompatActivity {
 
 
             if (isLoginValid()&&isPasswordValid()){
-                Intent intent = new Intent(Login.this,FilmActivity.class);
+                Intent intent = new Intent(LoginActivity.this,FilmActivity.class);
                 startActivity(intent);
             }
-            else  Toast.makeText(Login.this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show();
+            else  Toast.makeText(LoginActivity.this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show();
 
         }
     };

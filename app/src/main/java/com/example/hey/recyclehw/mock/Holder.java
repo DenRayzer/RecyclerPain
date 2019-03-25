@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.example.hey.recyclehw.R;
 
+import java.util.List;
+
 public class Holder extends RecyclerView.ViewHolder {
     private TextView Name;
     private TextView Year;
@@ -15,7 +17,9 @@ public class Holder extends RecyclerView.ViewHolder {
     private ImageView Poster;
     private TextView Score;
     private TextView Number;
-    private String id;
+    private int id;
+    private Film film;
+
     public Holder(View itemView) {
         super(itemView);
         Name = itemView.findViewById(R.id.Namee);
@@ -27,15 +31,15 @@ public class Holder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bind(Film mock){
+    public void bind(Film mock, List<Film> filmList){
         Name.setText(mock.getName());
         Year.setText(mock.getYear());
         Description.setText(mock.getDescription());
         Poster.setImageResource(mock.getPoster());
         Score.setText(mock.getScore());
         Number.setText("#"+mock.getNumber());
-        id=mock.getNumber();
-
+//        id=mock.getNumber();
+       id = filmList.indexOf(mock);
     }
 
     public void setListener(final Adapter.OnItemClickListener myListener) {
@@ -43,8 +47,6 @@ public class Holder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 myListener.onItemClick(id);
-
-
             }
         });
     }

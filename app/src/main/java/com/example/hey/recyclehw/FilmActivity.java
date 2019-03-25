@@ -18,18 +18,17 @@ public class FilmActivity extends AppCompatActivity implements Adapter.OnItemCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycle_main);
 
-        if(savedInstanceState==null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container,RecycleFragment.newInstance()).commit();
-       }
+                    .replace(R.id.container, RecycleFragment.newInstance()).commit();
+        }
     }
 
     @Override
-    public void onItemClick(String id) {
+    public void onItemClick(int id) {
 
-        Intent intent = new Intent(FilmActivity.this,ConcreteFilmActivity.class);
-        intent.putExtra(ConcreteFilmActivity.User_id,id);
-
+        Intent intent = new Intent(FilmActivity.this, ConcreteFilmActivity.class);
+        intent.putExtra(ConcreteFilmActivity.User_id, id);
         startActivity(intent);
     }
 }

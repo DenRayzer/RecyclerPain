@@ -3,6 +3,8 @@ package com.example.hey.recyclehw.mock;
 import com.example.hey.recyclehw.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class FilmGenerator {
@@ -114,6 +116,12 @@ public class FilmGenerator {
         Films.add(new Film("99","Back to the Future","Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.","Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover","1985","8.5","http://www.bttfmovie.com/", R.drawable.movie44,"Won 1 Oscar. Another 18 wins & 26 nominations."));
         Films.add(new Film("100","Whiplash","A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.","Miles Teller, J.K. Simmons, Paul Reiser, Melissa Benoist","2014","8.5","http://sonyclassics.com/whiplash/", R.drawable.movie45,"Won 3 Oscars. Another 88 wins & 135 nominations."));
 
+        Collections.sort(Films, new Comparator<Film>() {
+            @Override
+            public int compare(Film f1, Film f2) {
+                return (Double.parseDouble(f1.getScore()) > Double.parseDouble(f2.getScore())) ? -1 : ((Double.parseDouble(f1.getScore()) < Double.parseDouble(f2.getScore())) ? 1 : 0);
+            }
+        });
 
         return Films;
 

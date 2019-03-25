@@ -20,20 +20,19 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
 
 
     @Override
-   public Holder onCreateViewHolder(ViewGroup parent, int viewType){
+    public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-       LayoutInflater inflater=LayoutInflater.from(parent.getContext());
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-      View view = inflater.inflate(R.layout.list_item,parent,false);
-
-
-      return new Holder(view);
-   }
+        View view = inflater.inflate(R.layout.list_item, parent, false);
+        Holder holder = new Holder(view);
+        holder.setListener(myListener);
+        return holder;
+    }
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        holder.bind(myFilmList.get(position));
-        holder.setListener(myListener);
+        holder.bind(myFilmList.get(position), myFilmList);
     }
 
     @Override
@@ -41,31 +40,17 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
         return myFilmList.size();
     }
 
-    public void addData(List<Film> Films){
+    public void addData(List<Film> Films) {
         myFilmList.addAll(Films);
         notifyDataSetChanged();
     }
 
     public static void setListener(OnItemClickListener itemListener) {
-        myListener=itemListener;
+        myListener = itemListener;
     }
 
-    public interface OnItemClickListener{
-       void onItemClick(String id);
-
-       /*   view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = movieHolder.getAdapterPosition();
-                if (position != RecyclerView.NO_POSITION) {
-                    Movie movie = movieArrayList.get(position);
-                    MovieGenerator.getInstance().setMovie(movie);
-                    Intent intent = new Intent(movieActivity, MovieItemActivity.class);
-                    movieActivity.startActivity(intent);
-                }
-            }
-        });*/
-
+    public interface OnItemClickListener {
+        void onItemClick(int id);
 
     }
 
